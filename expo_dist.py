@@ -13,7 +13,7 @@ def simulate_runs(lineup_stats, adjusted_pitcher_stats):
 
     average_runs = (lineup_average_runs + pitcher_average_runs) / 2
 
-    #runs exponential distribution once and gets expected runs. Should ideally run 1000+ times and get avg
+    #runs exponential distribution 100 times and gets expected runs.
     runs = np.random.exponential(average_runs, 100)
     return runs
 
@@ -24,6 +24,12 @@ adjusted_pitcher_stats = [2.49, 1.09] #xERA divided by innings per start. assume
 
 runs_scored = simulate_runs(lineup_stats, adjusted_pitcher_stats)
 
+#average of all simulations
 xruns = sum(runs_scored)/len(runs_scored)
 
 print("Number of runs scored:", round(xruns,3))
+
+
+
+###Different approach for stats. Use a teams xwOBA of the past 10 games. average it with their xwOBA for the season
+#use baseball savant to get team xwOBA
