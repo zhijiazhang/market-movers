@@ -18,9 +18,9 @@ def simulate_runs(lineup_stats, adjusted_pitcher_stats):
     return runs
 
 # Example. will be populated with each players xwOBA which will be gathered from baseball savant or any site that has it
-lineup_stats = [0.3, 0.35, 0.38, 0.42, 0.35, 0.3, 0.37, 0.34, 0.33]  # Fictional xwOBA for each player in the lineup
-pitcher_stats = [3.95, 2.95]  # Fictional opposing pitcher's xERA. starter then bullpen. 
-adjusted_pitcher_stats = [2.49, 1.09] #xERA divided by innings per start. assume starter throws 5.2 IP on avg each start. (15/27) * xERA to get adjusted
+lineup_stats = [0.326, 0.436, 0.341, 0.375, 0.36, 0.342, 0.356, 0.344, 0.319]  # Fictional xwOBA for each player in the lineup
+pitcher_stats = [4.89, 5.03]  # Fictional opposing pitcher's xERA. starter then bullpen. 
+adjusted_pitcher_stats = [3.09, 1.86] #xERA divided by innings per start. assume starter throws 5.2 IP on avg each start. (15/27) * xERA to get adjusted
 
 runs_scored = simulate_runs(lineup_stats, adjusted_pitcher_stats)
 
